@@ -1,6 +1,6 @@
 ﻿namespace Grocery.App.ViewModels;
 
-public class ProductCategoriesViewModel
+public class ProductCategoriesViewModel : BaseViewModel
 {
     
 }
