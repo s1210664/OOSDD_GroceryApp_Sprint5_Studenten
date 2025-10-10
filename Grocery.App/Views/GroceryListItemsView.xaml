@@ -24,7 +24,7 @@
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <Border Grid.Column="0" Stroke="#C49B33" StrokeThickness="4" Padding="10" Margin="10" HorizontalOptions="Center">
-            <CollectionView ItemsSource="{Binding MyGroceryListItems}" Margin="20" HorizontalOptions="Center" EmptyView="De boodschappenlijst is nog leeg. Voeg eerst boodschappen toe!">
+            <CollectionView ItemsSource="{Binding MyGroceryListItems}" Margin="20" HorizontalOptions="Center">
                 <CollectionView.Header>
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -39,11 +39,18 @@
                         <Label Text="Prijs" Grid.Column="2" HorizontalOptions="End" Margin="0,0,10,0"/>
                     </Grid>
                 </CollectionView.Header>
+                <CollectionView.EmptyView>
+                    <ContentView>
+                        <StackLayout>
+                            <Label Text="Er zijn geen producten aanwezig" Margin="0,30,0,0"/>
+                        </StackLayout>
+                    </ContentView>
+                </CollectionView.EmptyView>
                 <CollectionView.ItemsLayout>
                     <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
                 </CollectionView.ItemsLayout>
 
-                <CollectionView.ItemTemplate>
+                <CollectionView.ItemTemplate >
                     
                     <DataTemplate x:DataType="m:GroceryListItem">
                         
