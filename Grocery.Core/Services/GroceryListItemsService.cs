@@ -53,7 +53,7 @@ namespace Grocery.Core.Services
         {
             foreach (GroceryListItem g in groceryListItems)
             {
-                g.Product = _productRepository.Get(g.ProductId) ?? new(0, "", 0);
+                g.Product = _productRepository.Get(g.ProductId) ?? new(0, "", 0, new DateOnly(2025, 9, 25), 123.00);
             }
         }
 
